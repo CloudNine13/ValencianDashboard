@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import Valenbisi from './pages/Valenbisi'
+import Flowers from './pages/Flowers';
+import Sidebar from './components/Sidebar'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Bicycles from './pages/Bicycles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //TODO: Beetween Router and switch = sidebar
+    return(
+        <Router>
+            <Sidebar />
+            <Routes>
+                <Route path='/' element={<Valenbisi />} />
+                <Route path='/flowers' element={<Flowers />} />
+                <Route path='/bicycles' element={<Bicycles />} />
+            </Routes>
+        </Router>
+    )
 }
+
 
 export default App;

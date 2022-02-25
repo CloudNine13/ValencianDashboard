@@ -1,0 +1,8 @@
+.leaflet-container {
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    height: 91.7vh;
+    z-index: 0 !important;
+}
+
