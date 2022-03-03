@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TileLayer, Marker, Popup, MapContainer, ZoomControl } from 'react-leaflet';
 import L from "leaflet"
-import '../components/css/Map.css'
+import '../../css/Map.css'
 
 
 export default function Valenbisi() {
@@ -44,7 +44,7 @@ export default function Valenbisi() {
                             iconName = "75.svg"
                         }
                         const icon = L.icon({
-                            iconUrl: require(`../../public/markers/${iconName}`),
+                            iconUrl: require(`../../../public/svg/markers/${iconName}`),
                             iconSize:[60, 84],
                             iconAnchor: [30, 73],
                             popupAnchor: [0, -50]
