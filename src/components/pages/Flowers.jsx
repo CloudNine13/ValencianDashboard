@@ -41,7 +41,7 @@ export default function Flowers() {
                         <Marker key={i} icon={icon} position={[element.geometry.coordinates[1], element.geometry.coordinates[0]]}>
                             <Popup>
                                 <span>
-                                    <strong>Emplazamiento: </strong>{element.properties.emplazamie} <br/>
+                                    <strong>Dirección: </strong>{element.properties.emplazamie} <br/>
                                     <a href={`http://www.google.com/maps/place/${[element.geometry.coordinates[1], element.geometry.coordinates[0]]}`}>¿Cómo llegar?</a>
                                 </span>
                             </Popup>
