@@ -51,7 +51,7 @@ export default function Valenbisi() {
                         })
 
                         return (
-                            <Marker key={i} icon={icon} position={[element.geometry.coordinates[1], element.geometry.coordinates[0]]} tap={false}>
+                            <Marker key={i} icon={icon} position={[element.geometry.coordinates[1], element.geometry.coordinates[0]]} >
                                 <Popup>
                                     <span>
                                         <strong>Nombre: </strong>{element.properties.address},
