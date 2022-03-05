@@ -22,7 +22,8 @@ export default function Flowers() {
             className="map"
             center={[39.475, -0.37739]} // Valencia
             zoom={15}
-            zoomControl={false}>
+            zoomControl={false}
+            tap={false}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> | <a href="https://datos.gob.es/es/catalogo/l01462508-quioscos-de-flores1"><strong>datos.gob</strong>.es</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

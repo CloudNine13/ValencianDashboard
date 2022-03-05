@@ -20,6 +20,7 @@ export default function Valenbisi() {
         <div className="home">
             <MapContainer
             className="map"
+            tap={false}
             center={[39.46975, -0.36739]} // Valencia
             zoom={14}
             zoomControl={false}
