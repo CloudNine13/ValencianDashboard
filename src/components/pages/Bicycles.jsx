@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 export default function Bicycles() {
@@ -26,23 +25,14 @@ export default function Bicycles() {
     }, [])
 
     return(
-        <div style={{ 
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
-            border: "3px solid #ffa600",
-            padding: "10px",
-        }}>
-            <BarChart width={700} height={700} data={barData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip  position={{ x: 350, y: 125 }}/>
-                <Legend />
-                <Bar dataKey="Funcionan" fill="#82ca9d" />
-                <Bar dataKey="No funcionan" fill="#ff5232" />
-            </BarChart>
-        </div>
+        <BarChart width={700} height={700} data={barData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip  position={{ x: 350, y: 125 }}/>
+            <Legend />
+            <Bar dataKey="Funcionan" fill="#82ca9d" />
+            <Bar dataKey="No funcionan" fill="#ff5232" />
+        </BarChart>
     )
 }

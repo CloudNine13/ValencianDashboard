@@ -20,15 +20,9 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style type="text/css">
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
       :root {
         --main-color: #003147;
-        --orange-main: #ffa600;
+        --main-orange: #ffa600;
         --main-light: #005780;
         --main-white: #f5f5f5;
       }
@@ -42,8 +36,8 @@
         font-family: 'Lato';
         height: 100%;
         width: 100%;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -69,7 +63,7 @@
       }
 
       .loading-screen .name {
-        color: var(--orange-main);
+        color: var(--main-orange);
         font-size: 30px;
       }
 
@@ -96,7 +90,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="loading-screen">
-      <div class="name">Valencian Open Data</div>
+      <div class="name"><strong>Valencian Open Data</strong></div>
       <div class="loader"></div>
       <img src="/svg/escudo.svg"></div>
     </div>

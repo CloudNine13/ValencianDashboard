@@ -7,18 +7,18 @@ export const SidebarData = [
         title: 'Valenbisi',
         path: '/',
         icon: <bsIcons.BsBicycle />,
-        cName: 'nav-text'
+        cName: 'sidebar-text'
     },
     {
         title: 'Quioscos de flores',
         path: '/flowers',
         icon: <giIcons.GiFlowerPot />,
-        cName: 'nav-text'
+        cName: 'sidebar-text'
     },
     {
         title: 'Medida de bici',
         path: '/bicycles',
         icon: <aiIcons.AiOutlineBarChart />,
-        cName: 'nav-text'
+        cName: 'sidebar-text'
     },
 ]
