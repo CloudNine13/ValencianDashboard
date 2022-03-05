@@ -3,8 +3,12 @@
 .burger {
     z-index: 20000 !important;
     position: absolute;
-    margin: .8%;
-    padding: 1%;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    margin: 0.45%;
+    padding: 0.75%;
     border-radius: 50%;
     background: var(--main-color);
 }

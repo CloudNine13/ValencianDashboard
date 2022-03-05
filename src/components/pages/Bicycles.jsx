@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import Plot from 'react-plotly.js'
+import '../../css/Bicycles.css'
+
 
 export default function Bicycles() {
 
-    const [barData, setBarData] = useState([{
-        name: "Sensores de bicicletas",
-        "No funcionan": 5,
-        "Funcionan": 1
-    }])
+    const preData = [{
+        x: ["No funcionan"],
+        y: [5],
+        name: 5,
+        type: 'bar',
+    }, {
+        x: ["Funcionan"],
+        y: [1],
+        name: 1,
+        type: 'bar',
+    }]
+
+    const [barData, setBarData] = useState(preData)
 
     useEffect(() => {
         fetch("https://mapas.valencia.es/lanzadera/opendata/TRA_ESPIRAS_BICI_P/JSON?srsName=EPSG:4326")
@@ -17,22 +27,23 @@ export default function Bicycles() {
             const abled = res.filter(elem => elem.properties.fecha_actualizacion.length > 0)
 
             setBarData([{
-                "name": "Sensores de bicicletas",
-                "No funcionan": disabledCount,
-                "Funcionan":  abled.length,
+                x: ["No funcionan"],
+                y: [disabledCount],
+                name: disabledCount,
+                type: 'bar',
+            }, {
+                x: ["Funcionan"],
+                y: [abled.length],
+                name: abled.length,
+                type: 'bar',
             }])
         })
     }, [])
 
     return(
-        <BarChart width={700} height={700} data={barData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip  position={{ x: 350, y: 125 }}/>
-            <Legend />
-            <Bar dataKey="Funcionan" fill="#82ca9d" />
-            <Bar dataKey="No funcionan" fill="#ff5232" />
-        </BarChart>
+        <div className="bar-container">
+            <Plot data = {barData}
+            layout={{width: "30%", title: 'Detectores de bicicletas en puntos de medida'}} config={{scrollZoom:true}} />
+        </div>
     )
 }

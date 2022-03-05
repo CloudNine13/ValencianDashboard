@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from './components/ui/Sidebar'
 import Valenbisi from './components/pages/Valenbisi'
 import Flowers from './components/pages/Flowers';
-import Sidebar from './components/ui/Sidebar'
+import Bicycles from './components/pages/Bicycles';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import './css/app/App.css';
-import Bicycles from './components/pages/Bicycles';
 
 function App() {
 
